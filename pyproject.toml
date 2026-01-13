@@ -1,0 +1,59 @@
+[project]
+name = "gpt2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ipykernel>=7.1.0",
+    "jupyter>=1.1.1",
+    "numpy<2",
+    "pandas>=2.3.3",
+    "python-dotenv>=1.2.1",
+    "sentencepiece>=0.2.1",
+    "tiktoken>=0.12.0",
+    "tokenizers>=0.15.2",
+    "torch==2.1.2",
+    "torchaudio>=2.1.2",
+    "torchvision>=0.16.2",
+    "tqdm>=4.67.1",
+    "transformers==4.36.2",
+]
+
+[tool.ruff]
+# Автоисправление
+
+# Исключения
+exclude = [
+    '.git',
+    '.venv',
+    '__pycache__',
+]
+
+# Выбор правил
+lint.select = [
+    'E',
+    'F',
+    'I',
+    'UP',
+    'N',
+    'B',
+    'C4',
+    'RUF'
+]
+
+# Максимальная длина строки
+line-length = 88
+
+# Версия python
+target-version = 'py311'
+
+# Настройка сортировки импортов
+[tool.ruff.lint.isort]
+known-first-party = ['gpt2']
+
+# Настройка форматирования
+[tool.ruff.format]
+quote-style = 'single'
+indent-style = 'space'
+line-ending = 'auto'
