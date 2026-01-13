@@ -1,1 +1,0 @@
-# gpt2-from-scratch-pytorch
